@@ -18,6 +18,8 @@ export default function solution(content){
   console.log(`Женщин на корабле: ${femaleCount} (${(femaleCount/passengersCount*100).toFixed(2)}%)`);
 
   // Task 4
+  const survivedCount = passengers.filter((passenger) => passenger[1] !== '0').length;
+  console.log(`Выживших пассажиров: ${survivedCount} (${(survivedCount/passengersCount*100).toFixed(2)}%)`);
 
   // Task 5
   const names = passengers.map((passenger) => passenger[4].split('.').slice(1).join('').slice(1, -1));
